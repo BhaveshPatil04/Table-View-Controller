@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="asu-xG-rJL">
+            <objects>
+                <navigationController id="cGr-oE-Vqn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aOh-ut-Ivd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aFI-gw-bGp" kind="relationship" relationship="rootViewController" id="MRK-y8-DJd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDe-XN-lax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1543" y="-531"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="Rph-BY-YYe">
+            <objects>
+                <viewController storyboardIdentifier="dashboard" id="aFI-gw-bGp" customClass="dashboard" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xyg-Aq-SVr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Joe-vO-ik4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Pp-aj-ONy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-9S-hNB">
+                                <rect key="frame" x="93" y="75" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btn_push_action:" destination="aFI-gw-bGp" eventType="touchUpInside" id="5TK-ff-SL8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nDe-sZ-lgh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmf-Ip-obU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778" y="-531"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wjZ-Ck-1yE">
+                                <rect key="frame" x="0.0" y="20" width="320" height="552"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="nV2-zB-SlK">
+                                    <rect key="frame" x="0.0" y="108" width="320" height="53"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stud_cell" rowHeight="80" id="8yS-mz-Yc4" customClass="stud_cell">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8yS-mz-Yc4" id="WvC-bn-UXh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8q-hc-BIg">
+                                                    <rect key="frame" x="140" y="8" width="95" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="btn_two_action:" destination="8yS-mz-Yc4" eventType="touchUpInside" id="csZ-HU-yET"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxJ-JZ-spr">
+                                                    <rect key="frame" x="243" y="8" width="77" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="btn_three_action:" destination="8yS-mz-Yc4" eventType="touchUpInside" id="HOM-9v-oz6"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-Uy-mL5">
+                                                    <rect key="frame" x="25" y="10" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btn_three" destination="fxJ-JZ-spr" id="hue-eF-1x5"/>
+                                            <outlet property="btn_two" destination="D8q-hc-BIg" id="yFj-SO-NIl"/>
+                                            <outlet property="img_fb" destination="nTY-Uy-mL5" id="cOK-HM-A3h"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="P2f-MR-q6k"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cju-sf-Bkl"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2wb-Cp-WE6">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wjZ-Ck-1yE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="E6e-cD-PEe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wjZ-Ck-1yE" secondAttribute="bottom" constant="-4" id="lU8-Ym-Tjz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wjZ-Ck-1yE" secondAttribute="trailing" constant="-16" id="lYi-3T-rOp"/>
+                            <constraint firstItem="wjZ-Ck-1yE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="pbl-xe-8MB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fYA-y1-b3U"/>
+                    <connections>
+                        <outlet property="act_indicator_one" destination="2wb-Cp-WE6" id="J4L-KI-qMr"/>
+                        <outlet property="tbl_stud_info" destination="wjZ-Ck-1yE" id="y0I-9E-ogO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778" y="121"/>
+        </scene>
+        <!--View two-->
+        <scene sceneID="GKc-Wi-gwg">
+            <objects>
+                <viewController storyboardIdentifier="view_two" id="uVK-8b-dBi" customClass="view_two" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="abG-fR-zPW"/>
+                        <viewControllerLayoutGuide type="bottom" id="HMq-Gw-XhY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MZ7-VX-eHQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tO-q8-grK">
+                                <rect key="frame" x="73" y="60" width="174" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="push"/>
+                                <connections>
+                                    <action selector="btn_push_action:" destination="uVK-8b-dBi" eventType="touchUpInside" id="U7z-4J-htp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SSk-H9-eQ8"/>
+                    <connections>
+                        <outlet property="btn_push" destination="5tO-q8-grK" id="xem-8m-cGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOx-BC-uZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-131" y="-531"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="QMK-cd-NSz">
+            <objects>
+                <viewController storyboardIdentifier="ViewController3" id="lTk-pm-fOI" customClass="ViewController3" customModule="custom_table_view" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yJu-Dx-8xO"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Dq-kj-YmI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iwA-h8-rFP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13N-2q-h1T">
+                                <rect key="frame" x="113" y="90" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="pop"/>
+                                <connections>
+                                    <action selector="btnPopAction:" destination="lTk-pm-fOI" eventType="touchUpInside" id="UK6-wo-jXm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5N-vV-m5h">
+                                <rect key="frame" x="113" y="158" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="pop to root"/>
+                                <connections>
+                                    <action selector="btnPopToRootAction:" destination="lTk-pm-fOI" eventType="touchUpInside" id="32e-Ye-B7N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL9-uV-AAm">
+                                <rect key="frame" x="147" y="216" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CFh-v0-2bn"/>
+                    <connections>
+                        <outlet property="btnPopToRoot" destination="F5N-vV-m5h" id="Bus-Jy-sBD"/>
+                        <outlet property="btnpop" destination="13N-2q-h1T" id="1qn-dB-Hfn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4Z-cD-8IQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="-531"/>
+        </scene>
+    </scenes>
+</document>
